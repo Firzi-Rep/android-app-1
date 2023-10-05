@@ -90,6 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 Navigator.pushNamed(context, WelcomeScreen.id);
                               }
                             } catch (e) {
+                              // ignore: use_build_context_synchronously
                               signUpAlert(
                                 context: context,
                                 onPressed: () {
