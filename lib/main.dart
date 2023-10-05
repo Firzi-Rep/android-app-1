@@ -25,10 +25,10 @@ class MyApp extends StatelessWidget {
       )),
       initialRoute: HomeScreen.id,
       routes: {
-        HomeScreen.id: (context) => HomeScreen(),
-        LoginScreen.id: (context) => LoginScreen(),
-        SignUpScreen.id: (context) => SignUpScreen(),
-        WelcomeScreen.id: (context) => WelcomeScreen(),
+        HomeScreen.id: (context) => const HomeScreen(),
+        LoginScreen.id: (context) => const LoginScreen(),
+        SignUpScreen.id: (context) => const SignUpScreen(),
+        WelcomeScreen.id: (context) => const WelcomeScreen(),
       },
     );
   }
