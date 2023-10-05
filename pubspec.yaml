@@ -64,10 +64,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - android/assets/images/
-    - android/assets/images/icons/facebook.png
-    - android/assets/images/icons/google.png
-    - android/assets/images/icons/linkedin.png
+    - assets/images/
+    - assets/images/icons/facebook.png
+    - assets/images/icons/google.png
+    - assets/images/icons/linkedin.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -83,8 +83,8 @@ flutter:
   fonts:
     - family: Ubuntu
       fonts:
-        - asset: android/assets/fonts/Ubuntu-Regular.ttf
-        - asset: android/assets/fonts/Ubuntu-Bold.ttf
+        - asset: assets/fonts/Ubuntu-Regular.ttf
+        - asset: assets/fonts/Ubuntu-Bold.ttf
 
 
   #
