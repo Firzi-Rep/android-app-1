@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "460164232947",
+    "project_id": "rare-nectar-378001",
+    "storage_bucket": "rare-nectar-378001.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460164232947:android:b05173bfcd4d04ad8de986",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460164232947-q9tsdkvbfjipc5li4238j2ullvugs74l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATycYCHxmR_WSGJLn4iJ0FAWpsYPkEcV4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460164232947-q9tsdkvbfjipc5li4238j2ullvugs74l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
