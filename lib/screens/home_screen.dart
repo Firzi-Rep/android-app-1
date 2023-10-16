@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/components.dart';
+import 'package:flutter_application_1/components/sign_google.dart';
 import 'package:flutter_application_1/screens/login_screen.dart';
 import 'package:flutter_application_1/screens/signup_screen.dart';
 
@@ -26,22 +27,13 @@ class HomeScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const ScreenTitle(title: 'Hello'),
-                      const Text(
-                        'Welcome to Tasky, where you manage your daily tasks',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 20,
-                        ),
-                      ),
                       const SizedBox(
                         height: 15,
                       ),
                       Hero(
                         tag: 'login_btn',
                         child: CustomButton(
-                          buttonText: 'Login',
+                          buttonText: 'Masuk',
                           onPressed: () {
                             Navigator.pushNamed(context, LoginScreen.id);
                           },
@@ -53,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                       Hero(
                         tag: 'signup_btn',
                         child: CustomButton(
-                          buttonText: 'Sign Up',
+                          buttonText: 'Daftar',
                           isOutlined: true,
                           onPressed: () {
                             Navigator.pushNamed(context, SignUpScreen.id);
@@ -64,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                         height: 25,
                       ),
                       const Text(
-                        'Sign up using',
+                        'Daftar Menggunakan',
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 16,
@@ -82,20 +74,17 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () async {
+                              final user = await signInWithGoogle();
+                              if (user != null) {
+                                // Login berhasil, lanjutkan ke halaman berikutnya atau tampilkan pesan sukses
+                              }
+                            },
                             icon: CircleAvatar(
                               radius: 25,
                               backgroundColor: Colors.transparent,
                               child:
                                   Image.asset('assets/images/icons/google.png'),
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: CircleAvatar(
-                              radius: 25,
-                              child: Image.asset(
-                                  'assets/images/icons/linkedin.png'),
                             ),
                           ),
                         ],

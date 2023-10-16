@@ -96,7 +96,7 @@ class CustomTextField extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(40),
         border: Border.all(
-          width: 2.5,
+          width: 3.5,
           color: kTextColor,
         ),
       ),
@@ -129,7 +129,8 @@ class CustomBottomScreen extends StatelessWidget {
           alignment: Alignment.centerLeft,
           child: Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 30,
+              vertical: 30,
+              horizontal: 10,
             ),
             child: GestureDetector(
               onTap: () {

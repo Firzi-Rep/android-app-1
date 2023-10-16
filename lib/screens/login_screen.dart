@@ -43,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        const ScreenTitle(title: 'Login'),
+                        const ScreenTitle(title: 'Masuk'),
                         CustomTextField(
                           textField: TextField(
                               onChanged: (value) {
@@ -69,9 +69,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                         CustomBottomScreen(
-                          textButton: 'Login',
+                          textButton: 'Masuk',
                           heroTag: 'login_btn',
-                          question: 'Forgot password?',
+                          question: 'Lupa Password?',
                           buttonPressed: () async {
                             FocusManager.instance.primaryFocus?.unfocus();
                             setState(() {

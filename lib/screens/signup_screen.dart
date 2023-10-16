@@ -39,12 +39,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const TopScreenImage(screenImageName: 'signup.png'),
+                  // const TopScreenImage(screenImageName: 'signup.png'),
                   Expanded(
                     flex: 2,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                        horizontal: 15,
+                        vertical: 35,
+                        horizontal: 20,
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -74,7 +75,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 fontSize: 20,
                               ),
                               decoration: kTextInputDecoration.copyWith(
-                                hintText: 'Password',
+                                hintText: 'Kata Sandi',
                               ),
                             ),
                           ),
@@ -88,14 +89,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 fontSize: 20,
                               ),
                               decoration: kTextInputDecoration.copyWith(
-                                hintText: 'Confirm Password',
+                                hintText: 'Ulangi Kata Sandi',
                               ),
                             ),
                           ),
                           CustomBottomScreen(
-                            textButton: 'Sign Up',
+                            textButton: 'Daftar',
                             heroTag: 'signup_btn',
-                            question: 'Have an account?',
                             buttonPressed: () async {
                               FocusManager.instance.primaryFocus?.unfocus();
                               setState(() {
@@ -109,9 +109,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   if (context.mounted) {
                                     signUpAlert(
                                       context: context,
-                                      title: 'GOOD JOB',
-                                      desc: 'Go login now',
-                                      btnText: 'Login Now',
+                                      title: 'Akun Telah Terdaftar',
+                                      desc: 'Masuk Sekarang',
+                                      btnText: 'Masuk',
                                       onPressed: () {
                                         setState(() {
                                           _saving = false;
@@ -130,21 +130,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                       onPressed: () {
                                         SystemNavigator.pop();
                                       },
-                                      title: 'SOMETHING WRONG',
-                                      desc: 'Close the app and try again',
-                                      btnText: 'Close Now');
+                                      title: 'TERJADI KESALAHAN!',
+                                      desc: 'Keluar Aplikasi Dan Coba Lagi',
+                                      btnText: 'Keluar Sekarang');
                                 }
                               } else {
                                 showAlert(
                                     context: context,
-                                    title: 'WRONG PASSWORD',
+                                    title: 'Password Salah',
                                     desc:
-                                        'Make sure that you write the same password twice',
+                                        'Pastikan Anda menulis kata sandi yang sama dua kali',
                                     onPressed: () {
                                       Navigator.pop(context);
                                     }).show();
                               }
                             },
+                            question: 'Sudah Punya Akun?',
                             questionPressed: () async {
                               Navigator.pushNamed(context, LoginScreen.id);
                             },
